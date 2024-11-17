@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>COVID-19 Information Center</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#stats">Statistics</a></li>
+                <li><a href="#prevention">Prevention</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to COVID-19 Information Center</h2>
+            <p>Stay informed and stay safe.</p>
+        </section>
+
+        <section id="stats">
+            <h2>COVID-19 Statistics</h2>
+            <div id="statistics"></div>
+        </section>
+
+        <section id="prevention">
+            <h2>Prevention Tips</h2>
+            <ul>
+                <li>Wear a mask</li>
+                <li>Wash your hands frequently</li>
+                <li>Maintain social distancing</li>
+                <li>Get vaccinated</li>
+            </ul>
+        </section>
+
+        <section id="register">
+            <h2>Register</h2>
+            <form id="registration-form" action="register.php" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Register">
+            </form>
+        </section>
+
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form" action="login.php" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </form>
+        </section>
+
+        <section id="comments">
+            <h2>Comments</h2>
+            <div id="comment-list"></div>
+            <form id="comment-form" action="add_comment.php" method="POST">
+                <textarea name="comment" placeholder="Leave a comment" required></textarea>
+                <input type="submit" value="Submit Comment">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 COVID-19 Information Center</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Previewer</title>
+    <meta name="google-site-verification" content="bxL1ObOvU3cyeN5FPcu1ntZUTvLDaKpTYqI-jSNacmc" />
+    
+    <!-- Favicon links -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon in .ico format -->
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="192x192" href="android-chrome-192x192.png" type="image/png">
+    <link rel="icon" sizes="512x512" href="android-chrome-512x512.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="site.webmanifest">   
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include marked.js for markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4228438340094929"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="editor-pane">
+            <h2>Editor</h2>
+            <textarea id="markdown-input" placeholder="Enter Markdown text here..."></textarea>
+            <p id="word-count">Words: 0 / 1000</p>
+        </div>
+        <div class="preview-pane">
+            <div class="preview-header">
+                <h2>Preview</h2>
+                <div class="preview-controls">
+                    <button id="copy-preview">Copy Preview</button>
+                    <button id="increase-font">A+</button>
+                    <button id="decrease-font">A-</button>
+                </div>
+            </div>
+            <div id="preview-content" class="preview-content"></div>
+        </div>
+    </div>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

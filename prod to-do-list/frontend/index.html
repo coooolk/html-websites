@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="bxL1ObOvU3cyeN5FPcu1ntZUTvLDaKpTYqI-jSNacmc" />
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="my-to-do-list" class="title">My To-Do List</h1>
+            <div class="toggle-container">
+                <button id="darkModeToggle" class="dark-mode-toggle">
+                    <i id="darkModeIcon" class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <div id="authSection">
+            <button id="showAuthButton">Login / Register</button>
+        </div>
+
+        <div id="taskSection" style="display: none;">
+            <div class="input-container">
+                <input type="text" id="taskInput" placeholder="Add Task">
+                <button id="addTaskButton">Add Task</button>
+            </div>
+
+            <h2>Important Tasks</h2>
+            <ul id="importantTaskList" class="task-list"></ul>
+
+            <h2>Active Tasks</h2>
+            <ul id="taskList" class="task-list"></ul>
+
+            <h2>Completed Tasks</h2>
+            <ul id="completedTaskList" class="task-list"></ul>
+
+            <div class="button-group">
+                <button id="clearTasksButton">Clear All Tasks</button>
+                <button id="clearCompletedButton">Clear Completed Tasks</button>
+                <button id="clearUncompletedButton">Clear Active Tasks</button>
+            </div>
+
+            <button id="logoutButton">Logout</button>
+        </div>
+    </div>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="loginForm">
+                <h2>Login</h2>
+                <input type="text" id="loginUsername" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button id="loginButton">Login</button>
+            </div>
+            <div id="registerForm">
+                <h2>Register</h2>
+                <input type="text" id="registerUsername" placeholder="Username">
+                <input type="password" id="registerPassword" placeholder="Password">
+                <button id="registerButton">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="feedbackMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

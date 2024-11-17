@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Layout Styles */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    height: calc(100vh - 100px);
+}
+
+/* Editor Pane */
+.editor-pane {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#word-count {
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Preview Pane */
+.preview-pane {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preview-controls button {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#preview-content {
+    flex-grow: 1;
+    padding-top: 10px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Dark Mode Styles */
+.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark .preview-pane {
+    background-color: #444;
+    border-color: #666;
+}
+
+.dark textarea {
+    background-color: #555;
+    color: #fff;
+    border-color: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .editor-pane, .preview-pane {
+        width: 100%;
+    }
+
+    #markdown-input {
+        height: 200px;
+    }
+
+    #preview-content {
+        max-height: 200px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    #markdown-input {
+        height: 150px;
+    }
+
+    #preview-content {
+        max-height: 150px;
+    }
+}
